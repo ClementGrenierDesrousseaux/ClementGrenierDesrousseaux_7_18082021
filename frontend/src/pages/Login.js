@@ -28,14 +28,14 @@ function Login() {
   };
   return (
     <div className="loginContainer">
-      <label>Prénom et nom:</label>
+      <label>Prénom et nom :</label>
       <input
         type="text"
         onChange={(event) => {
           setUsername(event.target.value);
         }}
       />
-      <label>Password:</label>
+      <label>Mot de passe :</label>
       <input
         type="password"
         onChange={(event) => {
@@ -43,7 +43,7 @@ function Login() {
         }}
       />
 
-      <button onClick={login}> Login </button>
+      <button onClick={login}> Se connecter </button>
     </div>
   );
 }

@@ -1,4 +1,4 @@
- .App {
+.App {
   width: 100%;
   height: auto;
   display: flex;
@@ -11,50 +11,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
-}
-
-.post {
-  width: 400px;
-  height: 300px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  border: 1px solid lightgray;
-  font-family: Arial, Helvetica, sans-serif;
-
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
-.post:hover {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  cursor: pointer;
-}
-.post .title {
-  flex: 20%;
-  border-bottom: 1px solid lightgray;
-  background-color: #818181;
-  display: grid;
-  place-content: center;
-  color: white;
-}
-
-.post .body {
-  flex: 60%;
-  display: grid;
-  place-content: center;
-}
-
-.post .footer {
-  flex: 20%;
-  border-top: 1px solid lightgray;
-  display: flex;
-  align-items: center;
-  padding-left: 15px;
-  background-color: #818181;
-  color: white;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 
 .footer .username {
@@ -96,7 +52,7 @@ body {
   width: 500px;
   height: auto;
   padding: 20px;
-  border: 5px solid black;
+  border: 3px solid black;
   border-radius: 5px;
 }
 
@@ -107,7 +63,7 @@ body {
   border: 2px solid grey;
   border-radius: 5px;
   padding-left: 10px;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .formContainer button {
@@ -126,6 +82,12 @@ body {
 
 span {
   color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .formContainer {
+    width: 350px;
+  }
 }
 
 /* NAVBAR */
@@ -176,7 +138,28 @@ span {
   margin-right: 10px;
   color: white;
   font-weight: lighter;
-} 
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    height: auto;
+    background-color: #818181;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+  }
+
+  .loggedInContainer {
+    font-size: 0.5em;
+  }
+
+  .navbar button {
+    font-size: 1.4em;
+  }
+}
 
 /* INDIVIDUAL POST */
 .postPage {
@@ -284,6 +267,79 @@ button {
   font-size: 25px;
 }
 
+.post {
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  border: 1px solid lightgray;
+  font-family: Arial, Helvetica, sans-serif;
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.post:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+.post .title {
+  flex: 20%;
+  border-bottom: 1px solid lightgray;
+  background-color: #818181;
+  display: grid;
+  place-content: center;
+  color: white;
+}
+
+.post .body {
+  flex: 60%;
+  display: grid;
+  place-content: center;
+}
+
+.post .footer {
+  flex: 20%;
+  border-top: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  background-color: #818181;
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .post {
+    width: 350px;
+  }
+
+  .postPage {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #individual {
+    height: 350px;
+    width: 350px;
+  }
+
+  #individual .title,
+  #individual .footer {
+    font-size: 20px;
+  }
+
+  #individual .body {
+    font-size: 15px;
+  }
+
+  .rightSide {
+    margin-bottom: 20px;
+  }
+}
+
 /* LOGIN */
 
 .loginContainer {
@@ -311,8 +367,7 @@ button {
 
 .loginContainer input {
   border: 2px solid black;
-} 
-
+}
 
 /* REGISTRATION */
 

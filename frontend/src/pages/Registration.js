@@ -34,7 +34,7 @@ function Registration() {
         validationSchema={validationSchema}
       >
         <Form className="registrationContainer">
-          <label>Prénom + Nom: </label>
+          <label>Prénom + Nom : </label>
           <ErrorMessage name="username" component="span" />
           <Field
             autocomplete="off"
@@ -43,7 +43,7 @@ function Registration() {
             placeholder="(Ex. John Doe...)"
           />
 
-          <label>Email: </label>
+          <label>Email : </label>
           <ErrorMessage name="email" component="span" />
           <Field
             autocomplete="off"
@@ -53,17 +53,17 @@ function Registration() {
             placeholder="(Ex. john.doe@groupomania.com...)"
           />
 
-          <label>Password: </label>
+          <label>Mot de passe : </label>
           <ErrorMessage name="password" component="span" />
           <Field
             autocomplete="off"
             type="password"
             id="inputCreatePost"
             name="password"
-            placeholder="Your Password..."
+            placeholder="Votre mot de passe"
           />
 
-          <button type="submit"> Register</button>
+          <button type="submit">S'inscrire</button>
         </Form>
       </Formik>
     </div>
