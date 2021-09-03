@@ -23,7 +23,10 @@ function Post() {
   }, []);
 
   const addComment = () => {
-    axios
+    if (newComment === "") {
+      alert("Vous devez écrire un commentaire")
+    } else {
+      axios
       .post(
         "http://localhost:3001/comments",
         {
@@ -48,6 +51,7 @@ function Post() {
           setNewComment("");
         }
       });
+    }
   };
 
   const deleteComment = (id) => {
@@ -106,6 +110,7 @@ function Post() {
       </div>
       <div className="rightSide">
         <div className="addCommentContainer">
+          <div id="addCommentError"></div>
           <input
             type="text"
             placeholder="Ex : Je suis 100% d'accord ..."

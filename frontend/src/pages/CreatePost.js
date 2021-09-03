@@ -50,7 +50,7 @@ function CreatePost() {
       >
         <Form className="formContainer">
           <label>Nom de l'article: </label>
-          <ErrorMessage name="title" component="span" />
+          <ErrorMessage name="title" component="span"/>
           <Field
             autocomplete="off"
             id="inputCreatePost"
@@ -60,6 +60,7 @@ function CreatePost() {
           <label>Contenu de l'article: </label>
           <ErrorMessage name="postText" component="span" />
           <Field
+            as="textarea"
             autocomplete="off"
             id="inputCreatePost"
             name="postText"

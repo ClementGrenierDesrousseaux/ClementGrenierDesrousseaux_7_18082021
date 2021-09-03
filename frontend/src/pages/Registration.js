@@ -15,8 +15,8 @@ function Registration() {
 
   const validationSchema = Yup.object().shape({
     username: Yup.string().min(3).max(20).required(),
-    email: Yup.string().required(),
-    password: Yup.string().min(4).max(20).required(),
+    email: Yup.string().required().email(),
+    password: Yup.string().matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/, "You must have at least one uppercase letter, one lowercase letter and one number"), //Une lettre majuscule, une lettre minuscule et 1 chiffre
   });
 
   const onSubmit = (data) => {
